@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Halaman Tidak Ditemukan</title>
+  <style>
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(37,99,235,.18), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(14,165,233,.18), transparent 30%),
+        #f8fbff;
+      color:#0f172a;
+    }
+
+    .card{
+      width:min(100%, 720px);
+      background:rgba(255,255,255,.94);
+      border:1px solid #dbeafe;
+      border-radius:30px;
+      box-shadow:0 24px 70px rgba(30,64,175,.14);
+      padding:48px 28px;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      background:#dbeafe;
+      border-radius:50%;
+      top:-100px;
+      right:-70px;
+      opacity:.7;
+    }
+
+    .icon{
+      width:84px;
+      height:84px;
+      margin:0 auto 20px;
+      border-radius:24px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,#2563eb,#0ea5e9);
+      box-shadow:0 14px 34px rgba(37,99,235,.28);
+      color:white;
+    }
+
+    .icon svg{
+      width:42px;
+      height:42px;
+    }
+
+    .code{
+      font-size:clamp(72px,18vw,140px);
+      line-height:.9;
+      font-weight:900;
+      letter-spacing:-8px;
+      color:#2563eb;
+      margin-bottom:18px;
+      text-shadow:0 6px 0 rgba(37,99,235,.07);
+    }
+
+    h1{
+      font-size:clamp(24px,5vw,34px);
+      margin-bottom:12px;
+    }
+
+    p{
+      color:#64748b;
+      font-size:16px;
+      line-height:1.7;
+      max-width:540px;
+      margin:0 auto;
+    }
+
+    .status{
+      margin:26px auto 0;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:10px 15px;
+      border-radius:999px;
+      background:#eff6ff;
+      color:#1d4ed8;
+      font-weight:700;
+      font-size:13px;
+      border:1px solid #bfdbfe;
+    }
+
+    .dot{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#ef4444;
+      box-shadow:0 0 0 5px rgba(239,68,68,.10);
+    }
+
+    .buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+
+    .btn{
+      min-width:150px;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+      border-radius:15px;
+      padding:14px 20px;
+      font-size:15px;
+      font-weight:800;
+      transition:.2s ease;
+    }
+
+    .primary{
+      color:#fff;
+      background:linear-gradient(135deg,#2563eb,#0ea5e9);
+      box-shadow:0 12px 25px rgba(37,99,235,.22);
+    }
+
+    .secondary{
+      color:#1e40af;
+      background:#eff6ff;
+      border:1px solid #bfdbfe;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .footer{
+      margin-top:30px;
+      font-size:12px;
+      color:#94a3b8;
+    }
+
+    @media(max-width:480px){
+      .card{
+        padding:38px 18px;
+        border-radius:24px;
+      }
+      .code{
+        letter-spacing:-4px;
+      }
+      .buttons{
+        flex-direction:column;
+      }
+      .btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 9v4"></path>
+        <path d="M12 17h.01"></path>
+        <path d="M10.3 3.6 2.2 17.7A2 2 0 0 0 3.9 21h16.2a2 2 0 0 0 1.7-3.3L13.7 3.6a2 2 0 0 0-3.4 0Z"></path>
+      </svg>
+    </div>
+
+    <div class="code">404</div>
+    <h1>Halaman Tidak Ditemukan</h1>
+    <p>
+      Maaf, halaman yang Anda cari tidak tersedia, telah dipindahkan,
+      atau alamat yang dimasukkan tidak benar.
+    </p>
+
+    <div class="status">
+      <span class="dot"></span>
+      404 ERROR • PAGE NOT FOUND
+    </div>
+
+    <div class="buttons">
+      <button class="btn primary" onclick="history.back()">← Kembali</button>
+      <a class="btn secondary" href="/">Ke Beranda</a>
+    </div>
+
+    <div class="footer">
+      Error 404 • Server tidak menemukan halaman yang diminta.
+    </div>
+  </main>
+</body>
+</html>
